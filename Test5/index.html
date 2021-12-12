@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>四则运算</title>
+
+    <style>
+        .itemBox{
+            background-color: rgb(52, 171, 250);
+            color: rgb(216, 216, 216);
+            border-radius: 10px;
+            height: 30px;
+            line-height: 30px;
+            padding: 5px 10px;
+            margin: 10px;
+
+        }
+        .redColor{
+            background-color: rgb(189, 21, 21);
+        }
+        ul{
+            list-style-type: none;
+            padding-left: 0px;
+        }
+        button{
+            font-size: 18px;
+            background-color:rgb(175, 250, 250);
+            border-radius: 10px;
+            border: 1px solid #A6A6A6;
+        }
+        #showAll{
+            margin-left: 50px;
+        }
+        #just-showError{
+            margin-left: 30px;
+        }
+
+    </style>
+
+</head>
+<body>
+    <div class="lg_layout">
+        <div id="readme"> 
+            <div class="Headline">
+                <h2>欢迎来到四则运算测试程序</h2>
+                <h2>请在下面的文本框中输入您要测试的题目的数目后，</h2>
+                <h2>点击开始按钮开始测试</h2>
+            </div>
+            
+            <div class="input">
+                <input type="text" id="input-num">
+                <!-- obtain the text's content after clicking start button -->
+                <button type="button", id="start-button">开始</button>
+            </div>
+        </div>      
+
+        <div id="test" class="input">
+            <h2>请在下面的文本框中，输入问题的答案</h2>
+            <div id="question">
+                
+            </div>
+
+            <div>
+                <input type="number" id="user-input" />
+                <button type="button" id="next-button">下一题</button>
+                <button type="button" id="end-test-button">结束考试</button>
+            </div>
+        </div>
+
+        <div id="result" class="showgrade">
+            <h2>你好，这是你的答题情况：</h2>
+            <div id="detail">
+                <ul id="condition" >
+
+                </ul>
+            </div>
+            
+            <button type="button" id="just-showError">只显示错题</button>
+            <button type="button" id="showAll">显示所有题目</button>
+        </div>
+    </div>
+    
+        
+<script src="app.js"></script>
+    
+</body>
+</html>

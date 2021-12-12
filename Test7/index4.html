@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="vue.global.js"></script>
+    <script src="app4.js" defer></script>
+    <script src="axios.min.js"></script>
+
+
+    <style>
+        p {
+            font-size: 30px;
+            line-height: 25px;
+            height: 25px;
+            color: aliceblue;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="myVue">
+        <h2>请问一个回答对错的题目(请包含问号)：</h2>
+        <input v-model="question">
+        <p v-bind:style="answerStyle"> {{ answer }}</p>
+        <img :src="imagePath" >
+    </div>
+</body>
+
+</html>

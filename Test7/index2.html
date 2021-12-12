@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="vue.global.js"></script>
+    <script src="app2.js" defer></script>
+    <style>
+        .headline{
+            color: black;
+            font-size: 24px;
+            font-weight: bolder;
+        }
+        button{
+            background-color:white;
+            width:100px;
+            height:30px;
+            border-radius: 10px;
+        }
+        .cardNumber{
+            color: red;
+        }
+        .show{
+            position:relative;
+            margin-top: 30px;
+        }
+        .show span{
+            float: left;
+        }
+        .btn{
+            margin-top: 60px;
+            margin-left: 200px;
+            position:absolute;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="myVue">
+        <form v-on:submit.prevent="submitData">
+            请输入身份证号码： <input type="text" v-on:input="cardNumberInput($event)">
+
+            <div class="show">
+
+                <span class="headline">你输入的身份证号码为：</span>
+                <span v-bind:style="styleObject"> {{ cardNumber }} </span>
+                <span><img :src="judgeImage"></span>
+            </div>
+ 
+            <div class="btn">
+                <button type="submit">校验</button>
+            </div>
+        </form>
+    </div>
+    
+</body>
+
+</html>

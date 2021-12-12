@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="vue.global.js"></script>
+    <script src="app3.js" defer></script>
+    <style>
+        p {
+            font-size: 14px;
+            line-height: 25px;
+            height: 25px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="myVue">
+        <form>
+            <input  type="text" 
+                    id="cardInput" 
+                    v-model="cardNumber"
+            />
+            
+            <h2>Your card ID is {{ cardNumber }}</h2>
+            
+            <button @click="clearNumber">清除数据</button>
+        </form>
+    </div>
+</body>
+
+</html>
