@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Please Login</title>
+    <link type="text/css" rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+
+<body>
+    <div class="lg_layout">
+        <div class="Headline">
+            <h2>Welcome to check your grades！</h2>
+        </div>
+        <div class="content">
+            <form action="/login" method="POST">
+                <table>
+                    <tr>
+                        <td class="td_left"><label for="username">Username</label></td>
+                        <td class="td_right"><input type="text" name="username" id="username" placeholder="enter your username"></td>
+                    </tr>
+
+                    <tr>
+                        <td class="td_left"><label for="password">Password</label></td>
+                        <td class="td_right"><input type="password" name="password" id="password" placeholder="enter your password"></td>
+                    </tr>
+
+                    <tr>
+                        <td class="td_left"><label>Gender</label></td>
+                        <td class="td_right">
+                            <input type="radio" name="gender" value="male"> 男
+                            <input type="radio" name="gender" value="female"> 女
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td class="td_left"><label for="hobby">Hobby</label></td>
+                        <td class="td_right">
+                            <input type="checkbox" name="hy" value="swim">swimming
+                            <input type="checkbox" name="hy" value="game">game
+                            <input type="checkbox" name="hy" value="run">running
+                            <input type="checkbox" name="hy" value="eat">eating
+                        </td>
+                    </tr>
+                </table>
+
+                <br/>
+                <div class="btn">
+                    <button type="submit">Login</button>
+                    <button type="reset">Reset</button>
+                </div>
+            </form>
+        </div>
+    </div>  
+</body>
+</html>
